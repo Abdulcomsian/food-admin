@@ -1,0 +1,1477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AdminLTE 3 | Dashboard</title>
+
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="../../plugins/fontawesome-free/css/all.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- Tempusdominus Bootstrap 4 -->
+  <link rel="stylesheet" href="../../plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+  <!-- iCheck -->
+  <link rel="stylesheet" href="../../plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+  <!-- JQVMap -->
+  <link rel="stylesheet" href="../../plugins/jqvmap/jqvmap.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="../../dist/css/adminlte.min.css">
+  <!-- overlayScrollbars -->
+  <link rel="stylesheet" href="../../plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+  <!-- Daterange picker -->
+  <link rel="stylesheet" href="../../plugins/daterangepicker/daterangepicker.css">
+  <!-- summernote -->
+  <link rel="stylesheet" href="../../plugins/summernote/summernote-bs4.min.css">
+  <link rel="stylesheet" href="../../dist/css/style.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body class="hold-transition sidebar-mini layout-fixed">
+<div class="wrapper">
+
+  <!-- Preloader -->
+  <div class="preloader flex-column justify-content-center align-items-center">
+    <img class="animation__shake" src="../../dist/img/logo-main.png" alt="AdminLTELogo" height="120px" width="380px">
+  </div>
+
+  <!-- Navbar -->
+  <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+    <!-- Left navbar links -->
+    <ul class="navbar-nav leftNav">
+      <li class="nav-item">
+        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+      </li>
+      <li class="nav-item d-none d-sm-inline-block">
+        <a href="index3.html" class="nav-link active">Map View</a>
+      </li>
+      <li class="nav-item d-none d-sm-inline-block">
+        <a href="#" class="nav-link">Contact</a>
+      </li>
+    </ul>
+
+    <!-- Right navbar links -->
+    <ul class="navbar-nav ml-auto rightNav">
+      <!-- Navbar Search -->
+      <li class="nav-item">
+        <a class="nav-link seacrhIcon" data-widget="navbar-search" href="#" role="button">
+          <i class="fas fa-search"></i>
+        </a>
+        <div class="navbar-search-block">
+          <form class="form-inline">
+            <div class="input-group input-group-sm">
+              <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
+              <div class="input-group-append">
+                <button class="btn btn-navbar" type="submit">
+                  <i class="fas fa-search"></i>
+                </button>
+                <button class="btn btn-navbar" type="button" data-widget="navbar-search">
+                  <i class="fas fa-times"></i>
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </li>
+
+      <!-- Messages Dropdown Menu -->
+      <li class="nav-item dropdown">
+        <a class="nav-link mesageIcon" data-toggle="dropdown" href="#">
+          <i class="far fa-comments"></i>
+          <span class="badge badge-danger navbar-badge">3</span>
+        </a>
+        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right messageDropDown">
+          <a href="#" class="dropdown-item">
+            <!-- Message Start -->
+            <div class="media">
+              <img src="dist/img/user1-128x128.jpg" alt="User Avatar" class="img-size-50 mr-3 img-circle">
+              <div class="media-body">
+                <h3 class="dropdown-item-title">
+                  Brad Diesel
+                  <span class="float-right text-sm text-danger"><i class="fas fa-star"></i></span>
+                </h3>
+                <p class="text-sm">Call me whenever you can...</p>
+                <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
+              </div>
+            </div>
+            <!-- Message End -->
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item">
+            <!-- Message Start -->
+            <div class="media">
+              <img src="dist/img/user8-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
+              <div class="media-body">
+                <h3 class="dropdown-item-title">
+                  John Pierce
+                  <span class="float-right text-sm text-muted"><i class="fas fa-star"></i></span>
+                </h3>
+                <p class="text-sm">I got your message bro</p>
+                <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
+              </div>
+            </div>
+            <!-- Message End -->
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item">
+            <!-- Message Start -->
+            <div class="media">
+              <img src="dist/img/user3-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
+              <div class="media-body">
+                <h3 class="dropdown-item-title">
+                  Nora Silvester
+                  <span class="float-right text-sm text-warning"><i class="fas fa-star"></i></span>
+                </h3>
+                <p class="text-sm">The subject goes here</p>
+                <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
+              </div>
+            </div>
+            <!-- Message End -->
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item dropdown-footer">See All Messages</a>
+        </div>
+      </li>
+      <!-- Notifications Dropdown Menu -->
+      <li class="nav-item dropdown">
+        <a class="nav-link notification" data-toggle="dropdown" href="#">
+          <i class="far fa-bell"></i>
+          <span class="badge badge-warning navbar-badge">15</span>
+        </a>
+        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+          <span class="dropdown-item dropdown-header">15 Notifications</span>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item">
+            <i class="fas fa-envelope mr-2"></i> 4 new messages
+            <span class="float-right text-muted text-sm">3 mins</span>
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item">
+            <i class="fas fa-users mr-2"></i> 8 friend requests
+            <span class="float-right text-muted text-sm">12 hours</span>
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item">
+            <i class="fas fa-file mr-2"></i> 3 new reports
+            <span class="float-right text-muted text-sm">2 days</span>
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item dropdown-footer">See All Notifications</a>
+        </div>
+      </li>
+    </ul>
+  </nav>
+  <!-- /.navbar -->
+
+  <!-- Main Sidebar Container -->
+  <aside class="main-sidebar sidebar-dark-primary">
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <!-- Sidebar user panel (optional) -->
+      <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+        <div class="image">
+          <img src="../../dist/img/logo-main.png" alt="AdminLTE Logo" class="brand-image" style="opacity: .8">
+        </div>
+      </div>
+
+     
+
+      <!-- Sidebar Menu -->
+      <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+          <!-- Add icons to the links using the .nav-icon class
+               with font-awesome or any other icon font library -->
+          <li class="nav-item menu-open">
+            <a href="../index.html" class="nav-link">
+              <i class="nav-icon fas fa-tachometer-alt"></i>
+              <p>
+                Dashboard
+               
+              </p>
+            </a>
+          </li>
+          <li class="nav-item menu-open">
+            <a href="../map.html" class="nav-link">
+              <i class="nav-icon fas fa-map"></i>
+              <p>
+                Map View
+              </p>
+            </a>
+          </li>
+          <li class="nav-item menu-is-opening menu-open">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-copy"></i>
+              <p>
+                Setting
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview" style="display:block;">
+              <li class="nav-item">
+                <a href="./website-setting.html" class="nav-link active">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Website Settings</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="./delivery-setting.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Delivery Settings</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="./comission-setting.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Commission Settings</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Manage Sub Admin</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Change Password</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Payment Settings</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Application Settings</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Sliders Settings</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-building"></i>
+              <p>
+                Manage Business
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Add New Business</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Manage Business</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Business Coupon/Offer</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Business Order</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Business Report</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Business Reviews</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-building"></i>
+              <p>
+                Menu Management
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Cuisine</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Menu Category</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Addons</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Menu Items</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-car"></i>
+              <p>
+                Manage Drivers
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Driver List</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-users"></i>
+              <p>
+                Manage Customers
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Customer</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Track Payment</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-cart"></i>
+              <p>
+                Order
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Customer Orders</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Guest Orders</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-cart"></i>
+              <p>
+                Management
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Content</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Faq</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Newsletter Subscriber</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <!-- /.sidebar-menu -->
+    </div>
+    <!-- /.sidebar -->
+  </aside>
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1 class="m-0">Website Setting</h1>
+            <p class="commonTextColor">Welcome to AfricEat Admin!</p>
+          </div><!-- /.col -->
+        </div><!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
+
+    <section id="tabSection">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="tabDiv cardBox">
+                        <ul class="nav nav-pills" role="tablist">
+                            <li class="nav-item">
+                              <a class="nav-link active" data-toggle="pill" href="#site">Site</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" data-toggle="pill" href="#contact">Contact</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" data-toggle="pill" href="#location">Location</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="pill" href="#features">System Features</a>
+                              </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="pill" href="#sms">SMS Config</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="pill" href="#push">Push Config</a>
+                              </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="pill" href="#printer">Printer Config</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="pill" href="#facebook">Facebook Config</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tabContentPane">
+                          <!-- Tab panes -->
+                        <div class="tab-content">
+                            <div id="site" class="container tab-pane active"><br>
+                                <form action="">
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <div class="generalInfo cardBox">
+                                                <h3 class="cardTitle">General Info</h3>
+                                                <div class="formDiv">
+                                                    <form action="">
+                                                        <div class="inputDiv">
+                                                            <label for="">Site Name <span class="required">*</span></label>
+                                                            <input type="text" placeholder="Site Name">
+                                                        </div>
+                                                        <div class="inputDiv">
+                                                            <label for="">Site Logo <span class="required">*</span></label>
+                                                            <input type="file" placeholder="Site Name">
+                                                        </div>
+                                                        <div class="inputDiv">
+                                                            <label for="">Site Fav Icon<span class="required">*</span></label>
+                                                            <input type="file" placeholder="Site Name">
+                                                        </div>
+                                                        <div class="inputDiv">
+                                                            <label for="">Header Text<span class="required">*</span></label>
+                                                            <input type="text" placeholder="Header Text">
+                                                        </div>
+                                                        <div class="inputDiv">
+                                                            <label for="">Near By Business Radius<span class="required">*</span></label>
+                                                            <input type="text" placeholder="Business Radius">
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                            <div class="generalInfo cardBox">
+                                                <h3 class="cardTitle">Social Links</h3>
+                                                <div class="formDiv">
+                                                    <form action="">
+                                                        <div class="inputDiv">
+                                                            <label for="">Facebook URL</label>
+                                                            <input type="text" placeholder="Facebook URL">
+                                                        </div>
+                                                        <div class="inputDiv">
+                                                            <label for="">Twitter URL</label>
+                                                            <input type="text" placeholder="Twitter URL">
+                                                        </div>
+                                                        <div class="inputDiv">
+                                                            <label for="">YouTube URL</label>
+                                                            <input type="text" placeholder="YouTube URL">
+                                                        </div>
+                                                        <div class="inputDiv">
+                                                            <label for="">Instagram</label>
+                                                            <input type="text" placeholder="Instagram">
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="generalInfo cardBox">
+                                                <h3 class="cardTitle">SEO Content</h3>
+                                                <div class="formDiv">
+                                                    
+                                                        <div class="inputDiv">
+                                                            <label for="">Meta Tag <span class="required">*</span></label>
+                                                        </div>
+                                                        <div class="inputDiv">
+                                                            <input type="text" placeholder="Title">
+                                                        </div>
+                                                        <div class="inputDiv">
+                                                            <input type="text" placeholder="Keyword">
+                                                        </div>
+                                                        <div class="inputDiv">
+                                                            <input type="text" placeholder="Description">
+                                                        </div>
+                                                        <div class="inputDiv">
+                                                            <label for="">Google Analytic Code<span class="required">*</span></label>
+                                                        </div>
+                                                        <div class="inputDiv">
+                                                            <input type="text" placeholder="Google Analytic Code">
+                                                        </div>
+                                                        <div class="inputDiv">
+                                                            <label for="">Currency<span class="required">*</span></label>
+                                                        </div>
+                                                        <div class="inputDiv">
+                                                            <select id="currencyList">
+                                                                <option value="USD" selected="selected" label="US dollar">USD</option>
+                                                                <option value="EUR" label="Euro">EUR</option>
+                                                                <option value="JPY" label="Japanese yen">JPY</option>
+                                                                <option value="GBP" label="Pound sterling">GBP</option>
+                                                                <option disabled>──────────</option>
+                                                                <option value="AED" label="United Arab Emirates dirham">AED</option>
+                                                                <option value="AFN" label="Afghan afghani">AFN</option>
+                                                                <option value="ALL" label="Albanian lek">ALL</option>
+                                                                <option value="AMD" label="Armenian dram">AMD</option>
+                                                                <option value="ANG" label="Netherlands Antillean guilder">ANG</option>
+                                                                <option value="AOA" label="Angolan kwanza">AOA</option>
+                                                                <option value="ARS" label="Argentine peso">ARS</option>
+                                                                <option value="AUD" label="Australian dollar">AUD</option>
+                                                                <option value="AWG" label="Aruban florin">AWG</option>
+                                                                <option value="AZN" label="Azerbaijani manat">AZN</option>
+                                                                <option value="BAM" label="Bosnia and Herzegovina convertible mark">BAM</option>
+                                                                <option value="BBD" label="Barbadian dollar">BBD</option>
+                                                                <option value="BDT" label="Bangladeshi taka">BDT</option>
+                                                                <option value="BGN" label="Bulgarian lev">BGN</option>
+                                                                <option value="BHD" label="Bahraini dinar">BHD</option>
+                                                                <option value="BIF" label="Burundian franc">BIF</option>
+                                                                <option value="BMD" label="Bermudian dollar">BMD</option>
+                                                                <option value="BND" label="Brunei dollar">BND</option>
+                                                                <option value="BOB" label="Bolivian boliviano">BOB</option>
+                                                                <option value="BRL" label="Brazilian real">BRL</option>
+                                                                <option value="BSD" label="Bahamian dollar">BSD</option>
+                                                                <option value="BTN" label="Bhutanese ngultrum">BTN</option>
+                                                                <option value="BWP" label="Botswana pula">BWP</option>
+                                                                <option value="BYN" label="Belarusian ruble">BYN</option>
+                                                                <option value="BZD" label="Belize dollar">BZD</option>
+                                                                <option value="CAD" label="Canadian dollar">CAD</option>
+                                                                <option value="CDF" label="Congolese franc">CDF</option>
+                                                                <option value="CHF" label="Swiss franc">CHF</option>
+                                                                <option value="CLP" label="Chilean peso">CLP</option>
+                                                                <option value="CNY" label="Chinese yuan">CNY</option>
+                                                                <option value="COP" label="Colombian peso">COP</option>
+                                                                <option value="CRC" label="Costa Rican colón">CRC</option>
+                                                                <option value="CUC" label="Cuban convertible peso">CUC</option>
+                                                                <option value="CUP" label="Cuban peso">CUP</option>
+                                                                <option value="CVE" label="Cape Verdean escudo">CVE</option>
+                                                                <option value="CZK" label="Czech koruna">CZK</option>
+                                                                <option value="DJF" label="Djiboutian franc">DJF</option>
+                                                                <option value="DKK" label="Danish krone">DKK</option>
+                                                                <option value="DOP" label="Dominican peso">DOP</option>
+                                                                <option value="DZD" label="Algerian dinar">DZD</option>
+                                                                <option value="EGP" label="Egyptian pound">EGP</option>
+                                                                <option value="ERN" label="Eritrean nakfa">ERN</option>
+                                                                <option value="ETB" label="Ethiopian birr">ETB</option>
+                                                                <option value="EUR" label="EURO">EUR</option>
+                                                                <option value="FJD" label="Fijian dollar">FJD</option>
+                                                                <option value="FKP" label="Falkland Islands pound">FKP</option>
+                                                                <option value="GBP" label="British pound">GBP</option>
+                                                                <option value="GEL" label="Georgian lari">GEL</option>
+                                                                <option value="GGP" label="Guernsey pound">GGP</option>
+                                                                <option value="GHS" label="Ghanaian cedi">GHS</option>
+                                                                <option value="GIP" label="Gibraltar pound">GIP</option>
+                                                                <option value="GMD" label="Gambian dalasi">GMD</option>
+                                                                <option value="GNF" label="Guinean franc">GNF</option>
+                                                                <option value="GTQ" label="Guatemalan quetzal">GTQ</option>
+                                                                <option value="GYD" label="Guyanese dollar">GYD</option>
+                                                                <option value="HKD" label="Hong Kong dollar">HKD</option>
+                                                                <option value="HNL" label="Honduran lempira">HNL</option>
+                                                                <option value="HKD" label="Hong Kong dollar">HKD</option>
+                                                                <option value="HRK" label="Croatian kuna">HRK</option>
+                                                                <option value="HTG" label="Haitian gourde">HTG</option>
+                                                                <option value="HUF" label="Hungarian forint">HUF</option>
+                                                                <option value="IDR" label="Indonesian rupiah">IDR</option>
+                                                                <option value="ILS" label="Israeli new shekel">ILS</option>
+                                                                <option value="IMP" label="Manx pound">IMP</option>
+                                                                <option value="INR" label="Indian rupee">INR</option>
+                                                                <option value="IQD" label="Iraqi dinar">IQD</option>
+                                                                <option value="IRR" label="Iranian rial">IRR</option>
+                                                                <option value="ISK" label="Icelandic króna">ISK</option>
+                                                                <option value="JEP" label="Jersey pound">JEP</option>
+                                                                <option value="JMD" label="Jamaican dollar">JMD</option>
+                                                                <option value="JOD" label="Jordanian dinar">JOD</option>
+                                                                <option value="JPY" label="Japanese yen">JPY</option>
+                                                                <option value="KES" label="Kenyan shilling">KES</option>
+                                                                <option value="KGS" label="Kyrgyzstani som">KGS</option>
+                                                                <option value="KHR" label="Cambodian riel">KHR</option>
+                                                                <option value="KID" label="Kiribati dollar">KID</option>
+                                                                <option value="KMF" label="Comorian franc">KMF</option>
+                                                                <option value="KPW" label="North Korean won">KPW</option>
+                                                                <option value="KRW" label="South Korean won">KRW</option>
+                                                                <option value="KWD" label="Kuwaiti dinar">KWD</option>
+                                                                <option value="KYD" label="Cayman Islands dollar">KYD</option>
+                                                                <option value="KZT" label="Kazakhstani tenge">KZT</option>
+                                                                <option value="LAK" label="Lao kip">LAK</option>
+                                                                <option value="LBP" label="Lebanese pound">LBP</option>
+                                                                <option value="LKR" label="Sri Lankan rupee">LKR</option>
+                                                                <option value="LRD" label="Liberian dollar">LRD</option>
+                                                                <option value="LSL" label="Lesotho loti">LSL</option>
+                                                                <option value="LYD" label="Libyan dinar">LYD</option>
+                                                                <option value="MAD" label="Moroccan dirham">MAD</option>
+                                                                <option value="MDL" label="Moldovan leu">MDL</option>
+                                                                <option value="MGA" label="Malagasy ariary">MGA</option>
+                                                                <option value="MKD" label="Macedonian denar">MKD</option>
+                                                                <option value="MMK" label="Burmese kyat">MMK</option>
+                                                                <option value="MNT" label="Mongolian tögrög">MNT</option>
+                                                                <option value="MOP" label="Macanese pataca">MOP</option>
+                                                                <option value="MRU" label="Mauritanian ouguiya">MRU</option>
+                                                                <option value="MUR" label="Mauritian rupee">MUR</option>
+                                                                <option value="MVR" label="Maldivian rufiyaa">MVR</option>
+                                                                <option value="MWK" label="Malawian kwacha">MWK</option>
+                                                                <option value="MXN" label="Mexican peso">MXN</option>
+                                                                <option value="MYR" label="Malaysian ringgit">MYR</option>
+                                                                <option value="MZN" label="Mozambican metical">MZN</option>
+                                                                <option value="NAD" label="Namibian dollar">NAD</option>
+                                                                <option value="NGN" label="Nigerian naira">NGN</option>
+                                                                <option value="NIO" label="Nicaraguan córdoba">NIO</option>
+                                                                <option value="NOK" label="Norwegian krone">NOK</option>
+                                                                <option value="NPR" label="Nepalese rupee">NPR</option>
+                                                                <option value="NZD" label="New Zealand dollar">NZD</option>
+                                                                <option value="OMR" label="Omani rial">OMR</option>
+                                                                <option value="PAB" label="Panamanian balboa">PAB</option>
+                                                                <option value="PEN" label="Peruvian sol">PEN</option>
+                                                                <option value="PGK" label="Papua New Guinean kina">PGK</option>
+                                                                <option value="PHP" label="Philippine peso">PHP</option>
+                                                                <option value="PKR" label="Pakistani rupee">PKR</option>
+                                                                <option value="PLN" label="Polish złoty">PLN</option>
+                                                                <option value="PRB" label="Transnistrian ruble">PRB</option>
+                                                                <option value="PYG" label="Paraguayan guaraní">PYG</option>
+                                                                <option value="QAR" label="Qatari riyal">QAR</option>
+                                                                <option value="RON" label="Romanian leu">RON</option>
+                                                                <option value="RON" label="Romanian leu">RON</option>
+                                                                <option value="RSD" label="Serbian dinar">RSD</option>
+                                                                <option value="RUB" label="Russian ruble">RUB</option>
+                                                                <option value="RWF" label="Rwandan franc">RWF</option>
+                                                                <option value="SAR" label="Saudi riyal">SAR</option>
+                                                                <option value="SEK" label="Swedish krona">SEK</option>
+                                                                <option value="SGD" label="Singapore dollar">SGD</option>
+                                                                <option value="SHP" label="Saint Helena pound">SHP</option>
+                                                                <option value="SLL" label="Sierra Leonean leone">SLL</option>
+                                                                <option value="SLS" label="Somaliland shilling">SLS</option>
+                                                                <option value="SOS" label="Somali shilling">SOS</option>
+                                                                <option value="SRD" label="Surinamese dollar">SRD</option>
+                                                                <option value="SSP" label="South Sudanese pound">SSP</option>
+                                                                <option value="STN" label="São Tomé and Príncipe dobra">STN</option>
+                                                                <option value="SYP" label="Syrian pound">SYP</option>
+                                                                <option value="SZL" label="Swazi lilangeni">SZL</option>
+                                                                <option value="THB" label="Thai baht">THB</option>
+                                                                <option value="TJS" label="Tajikistani somoni">TJS</option>
+                                                                <option value="TMT" label="Turkmenistan manat">TMT</option>
+                                                                <option value="TND" label="Tunisian dinar">TND</option>
+                                                                <option value="TOP" label="Tongan paʻanga">TOP</option>
+                                                                <option value="TRY" label="Turkish lira">TRY</option>
+                                                                <option value="TTD" label="Trinidad and Tobago dollar">TTD</option>
+                                                                <option value="TVD" label="Tuvaluan dollar">TVD</option>
+                                                                <option value="TWD" label="New Taiwan dollar">TWD</option>
+                                                                <option value="TZS" label="Tanzanian shilling">TZS</option>
+                                                                <option value="UAH" label="Ukrainian hryvnia">UAH</option>
+                                                                <option value="UGX" label="Ugandan shilling">UGX</option>
+                                                                <option value="USD" label="United States dollar">USD</option>
+                                                                <option value="UYU" label="Uruguayan peso">UYU</option>
+                                                                <option value="UZS" label="Uzbekistani soʻm">UZS</option>
+                                                                <option value="VES" label="Venezuelan bolívar soberano">VES</option>
+                                                                <option value="VND" label="Vietnamese đồng">VND</option>
+                                                                <option value="VUV" label="Vanuatu vatu">VUV</option>
+                                                                <option value="WST" label="Samoan tālā">WST</option>
+                                                                <option value="XAF" label="Central African CFA franc">XAF</option>
+                                                                <option value="XCD" label="Eastern Caribbean dollar">XCD</option>
+                                                                <option value="XOF" label="West African CFA franc">XOF</option>
+                                                                <option value="XPF" label="CFP franc">XPF</option>
+                                                                <option value="ZAR" label="South African rand">ZAR</option>
+                                                                <option value="ZMW" label="Zambian kwacha">ZMW</option>
+                                                                <option value="ZWB" label="Zimbabwean bonds">ZWB</option>
+                                                            </select>
+                                                            <span class="important">Current Currency Format Example: £105.05</span>
+                                                        </div>
+                                                        <div class="inputDiv">
+                                                            <label for="">Date/Time<span class="required">*</span></label>
+                                                        </div>
+                                                        <div class="inputDiv">
+                                                            <input type="date" placeholder="Google Analytic Code">
+                                                        </div>
+                                                        <div class="inputDiv">
+                                                            <input type="time" placeholder="Google Analytic Code">
+                                                            <span class="important">Current Date/Time Format Example: 25-08-2021 12:08 PM</span>
+                                                        </div>
+                                                        
+                                                </div>
+                                                
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                    <button>Submit</button>
+                                </div>
+                            </form>
+                            </div>
+                            <div id="contact" class="container tab-pane fade">
+                                <div class="cardBox">
+                                    <form action="">
+                                        <div class="container-fluid">
+                                            <div class="row">
+                                                <div class="col-lg-6">
+                                                    <div class="inputDiv">
+                                                        <label for="">Admin Name <span class="required">*</span></label>
+                                                        <input type="text" placeholder="Admin Name">
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <div class="inputDiv">
+                                                        <label for="">Admin Email <span class="required">*</span></label>
+                                                        <input type="text" placeholder="Admin Email">
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <div class="inputDiv">
+                                                        <label for="">Contact us Email <span class="required">*</span></label>
+                                                        <input type="text" placeholder="Contact us Email">
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <div class="inputDiv">
+                                                        <label for="">Invoice Email ID<span class="required">*</span></label>
+                                                        <input type="text" placeholder="Invoice Email ID">
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <div class="inputDiv">
+                                                        <label for="">Support Number<span class="required">*</span></label>
+                                                        <input type="text" placeholder="Support Number">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <button>Submit</button>
+                                    </form>
+                                </div>
+                            </div>
+                            <div id="location" class="container tab-pane fade">
+                                <div class="cardBox">
+                                    <form action="">
+                                        <div class="container-fluid">
+                                            <div class="row">
+                                                <div class="col-lg-6">
+                                                    <div class="inputDiv">
+                                                        <label for="">Address <span class="required">*</span></label>
+                                                        <input type="text" placeholder="Address">
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <div class="inputDiv">
+                                                        <label for="">Postal Code <span class="required">*</span></label>
+                                                        <input type="text" placeholder="Postal Code">
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <div class="inputDiv">
+                                                        <label for="">State(Fill out Postal Code first) <span class="required">*</span></label>
+                                                        <input type="text" placeholder="State(Fill out Postal Code first)">
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <div class="inputDiv">
+                                                        <label for="">City(Fill out Postal Code first)City(Fill out Zipcode first)<span class="required">*</span></label>
+                                                        <input type="text" placeholder="City(Fill out Postal Code first)City(Fill out Zipcode first)">
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <div class="inputDiv">
+                                                        <label for="">Country<span class="required">*</span></label>
+                                                        
+                                                        <select id="country" name="country" class="form-control">
+                                                            <option value="Afghanistan">Afghanistan</option>
+                                                            <option value="Åland Islands">Åland Islands</option>
+                                                            <option value="Albania">Albania</option>
+                                                            <option value="Algeria">Algeria</option>
+                                                            <option value="American Samoa">American Samoa</option>
+                                                            <option value="Andorra">Andorra</option>
+                                                            <option value="Angola">Angola</option>
+                                                            <option value="Anguilla">Anguilla</option>
+                                                            <option value="Antarctica">Antarctica</option>
+                                                            <option value="Antigua and Barbuda">Antigua and Barbuda</option>
+                                                            <option value="Argentina">Argentina</option>
+                                                            <option value="Armenia">Armenia</option>
+                                                            <option value="Aruba">Aruba</option>
+                                                            <option value="Australia">Australia</option>
+                                                            <option value="Austria">Austria</option>
+                                                            <option value="Azerbaijan">Azerbaijan</option>
+                                                            <option value="Bahamas">Bahamas</option>
+                                                            <option value="Bahrain">Bahrain</option>
+                                                            <option value="Bangladesh">Bangladesh</option>
+                                                            <option value="Barbados">Barbados</option>
+                                                            <option value="Belarus">Belarus</option>
+                                                            <option value="Belgium">Belgium</option>
+                                                            <option value="Belize">Belize</option>
+                                                            <option value="Benin">Benin</option>
+                                                            <option value="Bermuda">Bermuda</option>
+                                                            <option value="Bhutan">Bhutan</option>
+                                                            <option value="Bolivia">Bolivia</option>
+                                                            <option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option>
+                                                            <option value="Botswana">Botswana</option>
+                                                            <option value="Bouvet Island">Bouvet Island</option>
+                                                            <option value="Brazil">Brazil</option>
+                                                            <option value="British Indian Ocean Territory">British Indian Ocean Territory</option>
+                                                            <option value="Brunei Darussalam">Brunei Darussalam</option>
+                                                            <option value="Bulgaria">Bulgaria</option>
+                                                            <option value="Burkina Faso">Burkina Faso</option>
+                                                            <option value="Burundi">Burundi</option>
+                                                            <option value="Cambodia">Cambodia</option>
+                                                            <option value="Cameroon">Cameroon</option>
+                                                            <option value="Canada">Canada</option>
+                                                            <option value="Cape Verde">Cape Verde</option>
+                                                            <option value="Cayman Islands">Cayman Islands</option>
+                                                            <option value="Central African Republic">Central African Republic</option>
+                                                            <option value="Chad">Chad</option>
+                                                            <option value="Chile">Chile</option>
+                                                            <option value="China">China</option>
+                                                            <option value="Christmas Island">Christmas Island</option>
+                                                            <option value="Cocos (Keeling) Islands">Cocos (Keeling) Islands</option>
+                                                            <option value="Colombia">Colombia</option>
+                                                            <option value="Comoros">Comoros</option>
+                                                            <option value="Congo">Congo</option>
+                                                            <option value="Congo, The Democratic Republic of The">Congo, The Democratic Republic of The</option>
+                                                            <option value="Cook Islands">Cook Islands</option>
+                                                            <option value="Costa Rica">Costa Rica</option>
+                                                            <option value="Cote D'ivoire">Cote D'ivoire</option>
+                                                            <option value="Croatia">Croatia</option>
+                                                            <option value="Cuba">Cuba</option>
+                                                            <option value="Cyprus">Cyprus</option>
+                                                            <option value="Czech Republic">Czech Republic</option>
+                                                            <option value="Denmark">Denmark</option>
+                                                            <option value="Djibouti">Djibouti</option>
+                                                            <option value="Dominica">Dominica</option>
+                                                            <option value="Dominican Republic">Dominican Republic</option>
+                                                            <option value="Ecuador">Ecuador</option>
+                                                            <option value="Egypt">Egypt</option>
+                                                            <option value="El Salvador">El Salvador</option>
+                                                            <option value="Equatorial Guinea">Equatorial Guinea</option>
+                                                            <option value="Eritrea">Eritrea</option>
+                                                            <option value="Estonia">Estonia</option>
+                                                            <option value="Ethiopia">Ethiopia</option>
+                                                            <option value="Falkland Islands (Malvinas)">Falkland Islands (Malvinas)</option>
+                                                            <option value="Faroe Islands">Faroe Islands</option>
+                                                            <option value="Fiji">Fiji</option>
+                                                            <option value="Finland">Finland</option>
+                                                            <option value="France">France</option>
+                                                            <option value="French Guiana">French Guiana</option>
+                                                            <option value="French Polynesia">French Polynesia</option>
+                                                            <option value="French Southern Territories">French Southern Territories</option>
+                                                            <option value="Gabon">Gabon</option>
+                                                            <option value="Gambia">Gambia</option>
+                                                            <option value="Georgia">Georgia</option>
+                                                            <option value="Germany">Germany</option>
+                                                            <option value="Ghana">Ghana</option>
+                                                            <option value="Gibraltar">Gibraltar</option>
+                                                            <option value="Greece">Greece</option>
+                                                            <option value="Greenland">Greenland</option>
+                                                            <option value="Grenada">Grenada</option>
+                                                            <option value="Guadeloupe">Guadeloupe</option>
+                                                            <option value="Guam">Guam</option>
+                                                            <option value="Guatemala">Guatemala</option>
+                                                            <option value="Guernsey">Guernsey</option>
+                                                            <option value="Guinea">Guinea</option>
+                                                            <option value="Guinea-bissau">Guinea-bissau</option>
+                                                            <option value="Guyana">Guyana</option>
+                                                            <option value="Haiti">Haiti</option>
+                                                            <option value="Heard Island and Mcdonald Islands">Heard Island and Mcdonald Islands</option>
+                                                            <option value="Holy See (Vatican City State)">Holy See (Vatican City State)</option>
+                                                            <option value="Honduras">Honduras</option>
+                                                            <option value="Hong Kong">Hong Kong</option>
+                                                            <option value="Hungary">Hungary</option>
+                                                            <option value="Iceland">Iceland</option>
+                                                            <option value="India">India</option>
+                                                            <option value="Indonesia">Indonesia</option>
+                                                            <option value="Iran, Islamic Republic of">Iran, Islamic Republic of</option>
+                                                            <option value="Iraq">Iraq</option>
+                                                            <option value="Ireland">Ireland</option>
+                                                            <option value="Isle of Man">Isle of Man</option>
+                                                            <option value="Israel">Israel</option>
+                                                            <option value="Italy">Italy</option>
+                                                            <option value="Jamaica">Jamaica</option>
+                                                            <option value="Japan">Japan</option>
+                                                            <option value="Jersey">Jersey</option>
+                                                            <option value="Jordan">Jordan</option>
+                                                            <option value="Kazakhstan">Kazakhstan</option>
+                                                            <option value="Kenya">Kenya</option>
+                                                            <option value="Kiribati">Kiribati</option>
+                                                            <option value="Korea, Democratic People's Republic of">Korea, Democratic People's Republic of</option>
+                                                            <option value="Korea, Republic of">Korea, Republic of</option>
+                                                            <option value="Kuwait">Kuwait</option>
+                                                            <option value="Kyrgyzstan">Kyrgyzstan</option>
+                                                            <option value="Lao People's Democratic Republic">Lao People's Democratic Republic</option>
+                                                            <option value="Latvia">Latvia</option>
+                                                            <option value="Lebanon">Lebanon</option>
+                                                            <option value="Lesotho">Lesotho</option>
+                                                            <option value="Liberia">Liberia</option>
+                                                            <option value="Libyan Arab Jamahiriya">Libyan Arab Jamahiriya</option>
+                                                            <option value="Liechtenstein">Liechtenstein</option>
+                                                            <option value="Lithuania">Lithuania</option>
+                                                            <option value="Luxembourg">Luxembourg</option>
+                                                            <option value="Macao">Macao</option>
+                                                            <option value="Macedonia, The Former Yugoslav Republic of">Macedonia, The Former Yugoslav Republic of</option>
+                                                            <option value="Madagascar">Madagascar</option>
+                                                            <option value="Malawi">Malawi</option>
+                                                            <option value="Malaysia">Malaysia</option>
+                                                            <option value="Maldives">Maldives</option>
+                                                            <option value="Mali">Mali</option>
+                                                            <option value="Malta">Malta</option>
+                                                            <option value="Marshall Islands">Marshall Islands</option>
+                                                            <option value="Martinique">Martinique</option>
+                                                            <option value="Mauritania">Mauritania</option>
+                                                            <option value="Mauritius">Mauritius</option>
+                                                            <option value="Mayotte">Mayotte</option>
+                                                            <option value="Mexico">Mexico</option>
+                                                            <option value="Micronesia, Federated States of">Micronesia, Federated States of</option>
+                                                            <option value="Moldova, Republic of">Moldova, Republic of</option>
+                                                            <option value="Monaco">Monaco</option>
+                                                            <option value="Mongolia">Mongolia</option>
+                                                            <option value="Montenegro">Montenegro</option>
+                                                            <option value="Montserrat">Montserrat</option>
+                                                            <option value="Morocco">Morocco</option>
+                                                            <option value="Mozambique">Mozambique</option>
+                                                            <option value="Myanmar">Myanmar</option>
+                                                            <option value="Namibia">Namibia</option>
+                                                            <option value="Nauru">Nauru</option>
+                                                            <option value="Nepal">Nepal</option>
+                                                            <option value="Netherlands">Netherlands</option>
+                                                            <option value="Netherlands Antilles">Netherlands Antilles</option>
+                                                            <option value="New Caledonia">New Caledonia</option>
+                                                            <option value="New Zealand">New Zealand</option>
+                                                            <option value="Nicaragua">Nicaragua</option>
+                                                            <option value="Niger">Niger</option>
+                                                            <option value="Nigeria">Nigeria</option>
+                                                            <option value="Niue">Niue</option>
+                                                            <option value="Norfolk Island">Norfolk Island</option>
+                                                            <option value="Northern Mariana Islands">Northern Mariana Islands</option>
+                                                            <option value="Norway">Norway</option>
+                                                            <option value="Oman">Oman</option>
+                                                            <option value="Pakistan">Pakistan</option>
+                                                            <option value="Palau">Palau</option>
+                                                            <option value="Palestinian Territory, Occupied">Palestinian Territory, Occupied</option>
+                                                            <option value="Panama">Panama</option>
+                                                            <option value="Papua New Guinea">Papua New Guinea</option>
+                                                            <option value="Paraguay">Paraguay</option>
+                                                            <option value="Peru">Peru</option>
+                                                            <option value="Philippines">Philippines</option>
+                                                            <option value="Pitcairn">Pitcairn</option>
+                                                            <option value="Poland">Poland</option>
+                                                            <option value="Portugal">Portugal</option>
+                                                            <option value="Puerto Rico">Puerto Rico</option>
+                                                            <option value="Qatar">Qatar</option>
+                                                            <option value="Reunion">Reunion</option>
+                                                            <option value="Romania">Romania</option>
+                                                            <option value="Russian Federation">Russian Federation</option>
+                                                            <option value="Rwanda">Rwanda</option>
+                                                            <option value="Saint Helena">Saint Helena</option>
+                                                            <option value="Saint Kitts and Nevis">Saint Kitts and Nevis</option>
+                                                            <option value="Saint Lucia">Saint Lucia</option>
+                                                            <option value="Saint Pierre and Miquelon">Saint Pierre and Miquelon</option>
+                                                            <option value="Saint Vincent and The Grenadines">Saint Vincent and The Grenadines</option>
+                                                            <option value="Samoa">Samoa</option>
+                                                            <option value="San Marino">San Marino</option>
+                                                            <option value="Sao Tome and Principe">Sao Tome and Principe</option>
+                                                            <option value="Saudi Arabia">Saudi Arabia</option>
+                                                            <option value="Senegal">Senegal</option>
+                                                            <option value="Serbia">Serbia</option>
+                                                            <option value="Seychelles">Seychelles</option>
+                                                            <option value="Sierra Leone">Sierra Leone</option>
+                                                            <option value="Singapore">Singapore</option>
+                                                            <option value="Slovakia">Slovakia</option>
+                                                            <option value="Slovenia">Slovenia</option>
+                                                            <option value="Solomon Islands">Solomon Islands</option>
+                                                            <option value="Somalia">Somalia</option>
+                                                            <option value="South Africa">South Africa</option>
+                                                            <option value="South Georgia and The South Sandwich Islands">South Georgia and The South Sandwich Islands</option>
+                                                            <option value="Spain">Spain</option>
+                                                            <option value="Sri Lanka">Sri Lanka</option>
+                                                            <option value="Sudan">Sudan</option>
+                                                            <option value="Suriname">Suriname</option>
+                                                            <option value="Svalbard and Jan Mayen">Svalbard and Jan Mayen</option>
+                                                            <option value="Swaziland">Swaziland</option>
+                                                            <option value="Sweden">Sweden</option>
+                                                            <option value="Switzerland">Switzerland</option>
+                                                            <option value="Syrian Arab Republic">Syrian Arab Republic</option>
+                                                            <option value="Taiwan">Taiwan</option>
+                                                            <option value="Tajikistan">Tajikistan</option>
+                                                            <option value="Tanzania, United Republic of">Tanzania, United Republic of</option>
+                                                            <option value="Thailand">Thailand</option>
+                                                            <option value="Timor-leste">Timor-leste</option>
+                                                            <option value="Togo">Togo</option>
+                                                            <option value="Tokelau">Tokelau</option>
+                                                            <option value="Tonga">Tonga</option>
+                                                            <option value="Trinidad and Tobago">Trinidad and Tobago</option>
+                                                            <option value="Tunisia">Tunisia</option>
+                                                            <option value="Turkey">Turkey</option>
+                                                            <option value="Turkmenistan">Turkmenistan</option>
+                                                            <option value="Turks and Caicos Islands">Turks and Caicos Islands</option>
+                                                            <option value="Tuvalu">Tuvalu</option>
+                                                            <option value="Uganda">Uganda</option>
+                                                            <option value="Ukraine">Ukraine</option>
+                                                            <option value="United Arab Emirates">United Arab Emirates</option>
+                                                            <option value="United Kingdom">United Kingdom</option>
+                                                            <option value="United States">United States</option>
+                                                            <option value="United States Minor Outlying Islands">United States Minor Outlying Islands</option>
+                                                            <option value="Uruguay">Uruguay</option>
+                                                            <option value="Uzbekistan">Uzbekistan</option>
+                                                            <option value="Vanuatu">Vanuatu</option>
+                                                            <option value="Venezuela">Venezuela</option>
+                                                            <option value="Viet Nam">Viet Nam</option>
+                                                            <option value="Virgin Islands, British">Virgin Islands, British</option>
+                                                            <option value="Virgin Islands, U.S.">Virgin Islands, U.S.</option>
+                                                            <option value="Wallis and Futuna">Wallis and Futuna</option>
+                                                            <option value="Western Sahara">Western Sahara</option>
+                                                            <option value="Yemen">Yemen</option>
+                                                            <option value="Zambia">Zambia</option>
+                                                            <option value="Zimbabwe">Zimbabwe</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <div class="inputDiv">
+                                                        <label for="">Date & time<span class="required">*</span></label>
+                                                        <input type="datetime-local" placeholder="City(Fill out Postal Code first)City(Fill out Zipcode first)">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <button>Submit</button>
+                                    </form>
+                                </div>
+                            </div>
+                            <div id="features" class="container tab-pane fade">
+                                <div>
+                                    <form action="">
+                                        <div class="container-fluid">
+                                            <div class="row">
+                                                <div class="col-lg-6">
+                                                    <div class="notificationBox cardBox">
+                                                        <h3 class="cardTitle">Notification</h3>
+                                                        <div class="inputDiv">
+                                                            <label for="">Enable SMS Notification <span class="required">*</span></label>
+                                                            <label class="switch">
+                                                                <input type="checkbox" id="togBtn">
+                                                                    <div class="slider round">
+                                                                    <!--ADDED HTML -->
+                                                                    <span class="on">ON</span>
+                                                                    <span class="off">OFF</span>
+                                                                    <!--END-->
+                                                                    </div>
+                                                            </label>
+                                                        </div>
+                                                        <div class="inputDiv">
+                                                            <label for="">Enable Push Notification <span class="required">*</span></label>
+                                                            <label class="switch">
+                                                                <input type="checkbox" id="togBtn">
+                                                                    <div class="slider round">
+                                                                    <!--ADDED HTML -->
+                                                                    <span class="on">ON</span>
+                                                                    <span class="off">OFF</span>
+                                                                    <!--END-->
+                                                                    </div>
+                                                            </label>
+                                                        </div>
+                                                        <div class="inputDiv">
+                                                            <label for="">Enable FAX <span class="required">*</span></label>
+                                                            <label class="switch">
+                                                                <input type="checkbox" id="togBtn">
+                                                                    <div class="slider round">
+                                                                    <!--ADDED HTML -->
+                                                                    <span class="on">ON</span>
+                                                                    <span class="off">OFF</span>
+                                                                    <!--END-->
+                                                                    </div>
+                                                            </label>
+                                                        </div>
+                                                        <div class="inputDiv">
+                                                            <label for="">Enable Printer <span class="required">*</span></label>
+                                                            <label class="switch">
+                                                                <input type="checkbox" id="togBtn">
+                                                                    <div class="slider round">
+                                                                    <!--ADDED HTML -->
+                                                                    <span class="on">ON</span>
+                                                                    <span class="off">OFF</span>
+                                                                    <!--END-->
+                                                                    </div>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="additionalOption cardBox">
+                                                        <h3 class="cardTitle">Additional Option</h3>
+                                                        <div class="inputDiv">
+                                                            <label for="">Enable Facebook</label>
+                                                            <label class="switch">
+                                                                <input type="checkbox" id="togBtn">
+                                                                    <div class="slider round">
+                                                                    <!--ADDED HTML -->
+                                                                    <span class="on">ON</span>
+                                                                    <span class="off">OFF</span>
+                                                                    <!--END-->
+                                                                    </div>
+                                                            </label>
+                                                        </div>
+                                                        <div class="inputDiv">
+                                                            <label for="">Enable Reward Point</label>
+                                                            <label class="switch">
+                                                                <input type="checkbox" id="togBtn">
+                                                                    <div class="slider round">
+                                                                    <!--ADDED HTML -->
+                                                                    <span class="on">ON</span>
+                                                                    <span class="off">OFF</span>
+                                                                    <!--END-->
+                                                                    </div>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <div class="notificationBox cardBox">
+                                                        <h3 class="cardTitle">Service Option</h3>
+                                                        <div class="inputDiv">
+                                                            <label for="">Enable Delivery<span class="required">*</span></label>
+                                                            <label class="switch">
+                                                                <input type="checkbox" id="togBtn">
+                                                                    <div class="slider round">
+                                                                    <!--ADDED HTML -->
+                                                                    <span class="on">ON</span>
+                                                                    <span class="off">OFF</span>
+                                                                    <!--END-->
+                                                                    </div>
+                                                            </label>
+                                                        </div>
+                                                        <div class="inputDiv">
+                                                            <label for="">Enable Pickup<span class="required">*</span></label>
+                                                            <label class="switch">
+                                                                <input type="checkbox" id="togBtn">
+                                                                    <div class="slider round">
+                                                                    <!--ADDED HTML -->
+                                                                    <span class="on">ON</span>
+                                                                    <span class="off">OFF</span>
+                                                                    <!--END-->
+                                                                    </div>
+                                                            </label>
+                                                        </div>
+                                                        <div class="inputDiv">
+                                                            <label for="">Enable Dine In<span class="required">*</span></label>
+                                                            <label class="switch">
+                                                                <input type="checkbox" id="togBtn">
+                                                                    <div class="slider round">
+                                                                    <!--ADDED HTML -->
+                                                                    <span class="on">ON</span>
+                                                                    <span class="off">OFF</span>
+                                                                    <!--END-->
+                                                                    </div>
+                                                            </label>
+                                                        </div>
+                                                        <div class="inputDiv">
+                                                            <label for="">Enable Table Booking<span class="required">*</span></label>
+                                                            <label class="switch">
+                                                                <input type="checkbox" id="togBtn">
+                                                                    <div class="slider round">
+                                                                    <!--ADDED HTML -->
+                                                                    <span class="on">ON</span>
+                                                                    <span class="off">OFF</span>
+                                                                    <!--END-->
+                                                                    </div>
+                                                            </label>
+                                                        </div>
+                                                        <span class="important">Note: The followign API library must be enabled. Directions API, Distance Matrix API, Geocoding API, Geolocation API, Maps JavaScript API, Places API</span>
+                                                        <div class="inputDiv">
+                                                            
+                                                            <input type="text" placeholder="Enter Google API Key">
+                                                        </div>
+                                                        <div class="inputDiv">
+                                                            
+                                                            <select name="" id="">
+                                                                <option value="Kilometer">Kilometer</option>
+                                                                <option value="Mile">Mile</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="additionalOption cardBox">
+                                                        <h3 class="cardTitle">SMTP Config</h3>
+                                                        <div class="inputDiv">
+                                                            <div class="inputDiv">
+                                                                <label for="">Enter SMTP from name <span class="required">*</span></label>
+                                                                <input type="text" placeholder="Enter SMTP from name">
+                                                            </div>
+                                                           
+                                                        </div>
+                                                        <div class="inputDiv">
+                                                            <div class="inputDiv">
+                                                                <label for="">Enter SMTP from <span class="required">*</span></label>
+                                                                <input type="text" placeholder="Enter SMTP from">
+                                                            </div>
+                                                        </div>
+                                                        <div class="inputDiv">
+                                                            <div class="inputDiv">
+                                                                <label for="">Enter SMTP host name <span class="required">*</span></label>
+                                                                <input type="text" placeholder="Enter SMTP host name">
+                                                            </div>
+                                                        </div>
+                                                        <div class="inputDiv">
+                                                            <div class="inputDiv">
+                                                                <label for="">Enter SMTP user name <span class="required">*</span></label>
+                                                                <input type="text" placeholder="Enter SMTP user name">
+                                                            </div>
+                                                        </div>
+                                                        <div class="inputDiv">
+                                                            <div class="inputDiv">
+                                                                <label for="">Enter SMTP password <span class="required">*</span></label>
+                                                                <input type="text" placeholder="Enter SMTP password">
+                                                            </div>
+                                                        </div>
+                                                        <div class="inputDiv">
+                                                            <div class="inputDiv">
+                                                                <label for="">Enter SMTP Port <span class="required">*</span></label>
+                                                                <input type="text" placeholder="Enter SMTP Port">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                             
+                                            </div>
+                                        </div>
+                                        <button>Submit</button>
+                                    </form>
+                                    <div class="cardBox" style="margin-top: 50px;">
+                                        <div class="row">
+                                            <div class="col-lg-12">
+                                                <div class="cardBox">
+                                                    <h3 class="cardTitle">
+                                                     Test SMTP Configuaration
+                                                    </h3>
+                                                     <form action="">
+                                                         <div class="inputDiv">
+                                                             <input type="text" placeholder="Recipient's email">
+                                                         </div>
+                                                         <button>Submit</button>
+                                                     </form>
+                                                </div>
+                                             </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="sms" class="container tab-pane fade">
+                                <div class="cardBox">
+                                    <form action="">
+                                        <div class="container-fluid">
+                                            <div class="row">
+                                                <div class="col-lg-6">
+                                                    <div class="inputDiv">
+                                                        <label for="">Twilio Sid <span class="required">*</span></label>
+                                                        <input type="text" placeholder="Twilio Sid">
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <div class="inputDiv">
+                                                        <label for="">Twilio Token <span class="required">*</span></label>
+                                                        <input type="text" placeholder="Twilio Token">
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <div class="inputDiv">
+                                                        <label for="">Twilio From No <span class="required">*</span></label>
+                                                        <input type="text" placeholder="Twilio From No">
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <div class="inputDiv">
+                                                        <label for="">Sender<span class="required">*</span></label>
+                                                        <input type="text" placeholder="Sender">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <button>Submit</button>
+                                    </form>
+                                    <form action="">
+                                        <div class="cardBox">
+                                            <div class="row">
+                                                <div class="col-lg-12">
+                                                    <h3 class="cardTitle">Test SMS Configuaration</h3>
+                                                    <div class="inputDiv">
+                                                        <label for="">Recipient's phone<span class="required">*</span></label>
+                                                        <input type="text" placeholder="Recipient's phone">
+                                                    </div>
+                                                    <button>Send Now</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div id="push" class="container tab-pane fade">
+                                <div class="cardBox">
+                                    <form action="">
+                                        <div class="container-fluid">
+                                            <div class="row">
+                                                <div class="col-lg-6">
+                                                    <div class="inputDiv">
+                                                        <label for="">Android Push API Key <span class="required">*</span></label>
+                                                        <input type="text" placeholder="Android Push API Key">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <button>Submit</button>
+                                    </form>
+                                </div>
+                            </div>
+                            <div id="printer" class="container tab-pane fade">
+                                <div class="cardBox">
+                                    <form action="">
+                                        <div class="container-fluid">
+                                            <div class="row">
+                                                <div class="col-lg-6">
+                                                    <div class="inputDiv">
+                                                        <label for="">Twilio Sid <span class="required">*</span></label>
+                                                        <input type="text" placeholder="Twilio Sid">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <button>Submit</button>
+                                    </form>
+                                </div>
+                            </div>
+                            <div id="facebook" class="container tab-pane fade">
+                                <div class="cardBox">
+                                    <form action="">
+                                        <div class="container-fluid">
+                                            <div class="row">
+                                                <div class="col-lg-6">
+                                                    <div class="inputDiv">
+                                                        <label for="">Enter facebook app ID <span class="required">*</span></label>
+                                                        <input type="text" placeholder="Enter facebook app ID">
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <div class="inputDiv">
+                                                        <label for="">Enter facebook secret token <span class="required">*</span></label>
+                                                        <input type="text" placeholder="Enter facebook secret token">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <button>Submit</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+        </div>
+    </section>
+  </div>
+  <!-- /.content-wrapper -->
+  <footer class="main-footer">
+    <p>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AfricEat.io</a>.  All rights reserved.</p>
+   
+  </footer>
+
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark">
+    <!-- Control sidebar content goes here -->
+  </aside>
+  <!-- /.control-sidebar -->
+</div>
+<!-- ./wrapper -->
+
+<!-- jQuery -->
+<script src="../../plugins/jquery/jquery.min.js"></script>
+<!-- jQuery UI 1.11.4 -->
+<script src="../../plugins/jquery-ui/jquery-ui.min.js"></script>
+<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+<script>
+  $.widget.bridge('uibutton', $.ui.button)
+</script>
+<!-- Bootstrap 4 -->
+<script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- ChartJS -->
+<script src="../../plugins/chart.js/Chart.min.js"></script>
+<!-- Sparkline -->
+<script src="../../plugins/sparklines/sparkline.js"></script>
+<!-- JQVMap -->
+<script src="../../plugins/jqvmap/jquery.vmap.min.js"></script>
+<script src="../../plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
+<!-- jQuery Knob Chart -->
+<script src="../../plugins/jquery-knob/jquery.knob.min.js"></script>
+<!-- daterangepicker -->
+<script src="../../plugins/moment/moment.min.js"></script>
+<script src="../../plugins/daterangepicker/daterangepicker.js"></script>
+<!-- Tempusdominus Bootstrap 4 -->
+<script src="../../plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+<!-- Summernote -->
+<script src="../../plugins/summernote/summernote-bs4.min.js"></script>
+<!-- overlayScrollbars -->
+<script src="../../plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+<!-- AdminLTE App -->
+<script src="../../dist/js/adminlte.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="../../dist/js/demo.js"></script>
+<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+<script src="../../dist/js/pages/dashboard.js"></script>
+</body>
+</html>
