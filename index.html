@@ -12,21 +12,16 @@
   <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
   <!-- Tempusdominus Bootstrap 4 -->
   <link rel="stylesheet" href="plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
-  <!-- iCheck -->
-  <link rel="stylesheet" href="plugins/icheck-bootstrap/icheck-bootstrap.min.css">
-  <!-- JQVMap -->
-  <link rel="stylesheet" href="plugins/jqvmap/jqvmap.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="dist/css/adminlte.min.css">
   <!-- overlayScrollbars -->
   <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
-  <!-- Daterange picker -->
-  <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker.css">
-  <!-- summernote -->
-  <link rel="stylesheet" href="plugins/summernote/summernote-bs4.min.css">
   <link rel="stylesheet" href="dist/css/style.css">
-
   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <!-- DataTables -->
+  <link rel="stylesheet" href="../../plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+  <link rel="stylesheet" href="../../plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+  <link rel="stylesheet" href="../../plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
@@ -679,20 +674,9 @@
 <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <!-- ChartJS -->
 <script src="plugins/chart.js/Chart.min.js"></script>
-<!-- Sparkline -->
-<script src="plugins/sparklines/sparkline.js"></script>
-<!-- JQVMap -->
-<script src="plugins/jqvmap/jquery.vmap.min.js"></script>
-<script src="plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
-<!-- jQuery Knob Chart -->
-<script src="plugins/jquery-knob/jquery.knob.min.js"></script>
-<!-- daterangepicker -->
-<script src="plugins/moment/moment.min.js"></script>
-<script src="plugins/daterangepicker/daterangepicker.js"></script>
 <!-- Tempusdominus Bootstrap 4 -->
 <script src="plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
-<!-- Summernote -->
-<script src="plugins/summernote/summernote-bs4.min.js"></script>
+
 <!-- overlayScrollbars -->
 <script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
 <!-- AdminLTE App -->
@@ -701,12 +685,24 @@
 <script src="dist/js/demo.js"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="dist/js/pages/dashboard.js"></script>
+<!-- DataTables  & Plugins -->
+<script src="../../plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="../../plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+<script src="../../plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+<script src="../../plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+<script src="../../plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
+<script src="../../plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
+<script src="../../plugins/jszip/jszip.min.js"></script>
+<script src="../../plugins/pdfmake/pdfmake.min.js"></script>
+<script src="../../plugins/pdfmake/vfs_fonts.js"></script>
+<script src="../../plugins/datatables-buttons/js/buttons.html5.min.js"></script>
+<script src="../../plugins/datatables-buttons/js/buttons.print.min.js"></script>
+<script src="../../plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
 
 
 
 
 <script>
-  
   /* Chart.js Charts */
   // Sales chart
   var salesChartCanvas = document.getElementById('revenue-chart-canvas').getContext('2d')
@@ -833,6 +829,116 @@ $(function(){
         }
     })
 })
+</script>
+<script>
+  $(function () {
+    $("#couponTable").DataTable({"lengthChange": false,
+      "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+    }).buttons().container().appendTo('#couponTable_wrapper .col-md-6:eq(0)'); 
+    });
+
+    $(".createAddOn").click(function(){
+    $(".addOnsDiv").append("<div class='inputDiv'><label for=''>Menu Item Price</label><div class='d-flex'><input type='text' placeholder='Menu Item Price(£)'><input type='text' placeholder='Menu Item Price(£)'><button class='addBtn add-addons'>Add Sub add-on</button></div><div clas='addSubAddOn'></div></div>")
+    })
+    $(document).on("click",".add-addons",function() {
+    event.preventDefault();
+    $(".addSubAddOn").append("<div class='d-flex'><input type='text' placeholder='Menu Item Price(£)'><input type='text' placeholder='Menu Item Price(£)'><i style='background: #ffeae6;color: #ff6d4d !important;border-radius: .375rem;' class='fa fa-trash'></i></div>")
+
+    $(function () {
+        $("#couponTable").DataTable({"lengthChange": false,
+          "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+      }).buttons().container().appendTo('#couponTable_wrapper .col-md-6:eq(0)'); 
+  });
+  $(function () {
+      $("#pendingListTable").DataTable({"lengthChange": false,
+        "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+    }).buttons().container().appendTo('#pendingListTable_wrapper .col-md-6:eq(0)'); 
+    });
+    $(function () {
+    $("#approvedListTable").DataTable({"lengthChange": false,
+        "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+    }).buttons().container().appendTo('#approvedListTable_wrapper .col-md-6:eq(0)'); 
+    });
+    $(function () {
+    $("#rejectedListTAble").DataTable({"lengthChange": false,
+        "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+    }).buttons().container().appendTo('#rejectedListTAble_wrapper .col-md-6:eq(0)'); 
+  });
+  $(function () {
+    $("#faqTable").DataTable({"lengthChange": false,
+      "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+   }).buttons().container().appendTo('#faqTable_wrapper .col-md-6:eq(0)'); 
+  });
+  $(function () {
+    $("#newsletterTable").DataTable({"lengthChange": false,
+      "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+   }).buttons().container().appendTo('#newsletterTable_wrapper .col-md-6:eq(0)'); 
+  });
+  $(".addSubAddons").click(function(event){
+      event.preventDefault();
+      $(".modal-body .subAddons").append("<div class='subAdonsDiv'><div class='inputDiv'><input type='text' placeholder='Number Allow to Choose'></div><div class='inputDiv'><input type='text' placeholder='List Price'></div><button><i class='fa fa-trash'></i></button></div>")
+  })
+  $(function () {
+    $("#couponTable").DataTable({"lengthChange": false,
+      "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+   }).buttons().container().appendTo('#couponTable_wrapper .col-md-6:eq(0)'); 
+  });
+  $(function () {
+    $("#categoryTable").DataTable({"lengthChange": false,
+      "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+   }).buttons().container().appendTo('#categoryTable_wrapper .col-md-6:eq(0)'); 
+  });
+
+  $(".createAddOn").click(function(){
+    $(".addOnsDiv").append("<div class='inputDiv'><label for=''>Menu Item Price</label><div class='d-flex'><input type='text' placeholder='Menu Item Price(£)'><input type='text' placeholder='Menu Item Price(£)'><button class='addBtn add-addons'>Add Sub add-on</button></div><div clas='addSubAddOn'></div></div>")
+  })
+  $(document).on("click",".add-addons",function() {
+    event.preventDefault();
+    $(".addSubAddOn").append("<div class='d-flex'><input type='text' placeholder='Menu Item Price(£)'><input type='text' placeholder='Menu Item Price(£)'><i style='background: #ffeae6;color: #ff6d4d !important;border-radius: .375rem;' class='fa fa-trash'></i></div>")
+  })
+})
+var loadFile = function(event) {
+	var image = document.getElementById('Logo');
+	image.src = URL.createObjectURL(event.target.files[0]);
+};
+var loadBackgroundFile = function(event) {
+	var image = document.getElementById('backgroundImg');
+	image.src = URL.createObjectURL(event.target.files[0]);
+};
+$(function () {
+    $("#example1").DataTable({
+      "responsive": true, "lengthChange": false, "autoWidth": false,
+      "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+    }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+    $('#example2').DataTable({
+      "paging": true,
+      "lengthChange": false,
+      "searching": false,
+      "ordering": true,
+      "info": true,
+      "autoWidth": false,
+      "responsive": true,
+    });
+  });
+  $('input[type=checkbox]').change(function(){
+    // if is checked
+    if(this.checked){
+        // check all children
+        var lenchk = $(this).closest('ul').find(':checkbox');
+        var lenchkChecked = $(this).closest('ul').find(':checkbox:checked');
+
+        //if all siblings are checked, check its parent checkbox
+        if (lenchk.length == lenchkChecked.length) {
+            $(this).closest('ul').siblings().find(':checkbox').prop('checked', true);
+        }else{
+            $(this).closest('.checkbox').siblings().find(':checkbox').prop('checked', true);
+        }
+    } else {
+        // uncheck all children
+        $(this).closest('.checkbox').siblings().find(':checkbox').prop('checked', false);
+        $(this).closest('ul').siblings().find(':checkbox').prop('checked', false);
+    }
+});
 </script>
 
 </body>

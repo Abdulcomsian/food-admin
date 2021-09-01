@@ -646,40 +646,4 @@
       $logo.removeClass(skin)
     })
   })
-
-  var $brand_variants = createSkinBlock(logo_skins, function () {
-    var color = $(this).data('color')
-    var $logo = $('.brand-link')
-
-    if (color === 'navbar-light' || color === 'navbar-white') {
-      $logo.addClass('text-black')
-    } else {
-      $logo.removeClass('text-black')
-    }
-
-    logo_skins.forEach(function (skin) {
-      $logo.removeClass(skin)
-    })
-
-    if (color) {
-      $(this).parent().removeClass().addClass('custom-select mb-3 border-0').addClass(color).addClass(color !== 'navbar-light' && color !== 'navbar-white' ? 'text-light' : '')
-    } else {
-      $(this).parent().removeClass().addClass('custom-select mb-3 border-0')
-    }
-
-    $logo.addClass(color)
-  }, true).append($clear_btn)
-  $container.append($brand_variants)
-
-  var active_brand_color = null
-  $('.brand-link')[0].classList.forEach(function (className) {
-    if (logo_skins.indexOf(className) > -1 && active_brand_color === null) {
-      active_brand_color = className.replace('navbar-', 'bg-')
-    }
-  })
-
-  if (active_brand_color) {
-    $brand_variants.find('option.' + active_brand_color).prop('selected', true)
-    $brand_variants.removeClass().addClass('custom-select mb-3 text-light border-0 ').addClass(active_brand_color)
-  }
 })(jQuery)
